@@ -6,6 +6,7 @@ namespace AppleWinKeyboard.Core
 {
     internal class KeyMapper
     {
+        //BrightnessControl brightnessControl = new BrightnessControl();
         public Dictionary<Key, Action> ActionsMap { get; set; } = new Dictionary<Key, Action>();
 
         public KeyMapper()
@@ -23,14 +24,13 @@ namespace AppleWinKeyboard.Core
 
         public void BrightnessUp()
         {
-            BrightnessControl.SetBrightness(100);
+            //brightnessControl.BrightnessUp();
         }
 
         public void BrightnessDown()
         {
-            BrightnessControl.SetBrightness(-1);
+            //brightnessControl.BrightnessDown();
         }
-
     }
 
     internal struct Key
