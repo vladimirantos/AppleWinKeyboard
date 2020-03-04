@@ -39,6 +39,7 @@ namespace AppleWinKeyboard
             MainWindow.Close();
             _notifyIcon.Dispose();
             _notifyIcon = null;
+            System.Windows.Application.Current.Shutdown();
         }
 
         private void ShowMainWindow()

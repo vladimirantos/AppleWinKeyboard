@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace AppleWinKeyboard
 {
@@ -13,11 +14,11 @@ namespace AppleWinKeyboard
     {
         private HotkeyRegistrator _hotkeyRegistrator;
         private KeyMapper _keyMapper;
+
         public MainWindow()
         {
             InitializeComponent();
             _keyMapper = new KeyMapper();
-            WindowState = WindowState.Minimized;
         }
 
         protected override void OnSourceInitialized(EventArgs e)
@@ -27,6 +28,7 @@ namespace AppleWinKeyboard
             foreach(KeyValuePair<Key, Action> kv in _keyMapper.ActionsMap)
                 _hotkeyRegistrator.Add(kv.Key.Modifier, kv.Key.WinKey, kv.Value);
             _hotkeyRegistrator.Register();
+            Visibility = Visibility.Hidden;
         }
 
         private void OpenWindowAction()
