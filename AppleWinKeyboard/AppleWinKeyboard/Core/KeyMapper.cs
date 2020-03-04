@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Linq;
 
 namespace AppleWinKeyboard.Core
 {
     internal class KeyMapper
     {
-        //BrightnessControl brightnessControl = new BrightnessControl();
         public Dictionary<Key, Action> ActionsMap { get; set; } = new Dictionary<Key, Action>();
 
         public KeyMapper()
@@ -17,19 +17,9 @@ namespace AppleWinKeyboard.Core
             ActionsMap.Add(new Key(Modifiers.Ctrl | Modifiers.Win, Keys.F7), PlayControl.Previous);
             ActionsMap.Add(new Key(Modifiers.Ctrl | Modifiers.Win, Keys.F8), PlayControl.Pause);
             ActionsMap.Add(new Key(Modifiers.Ctrl | Modifiers.Win, Keys.F9), PlayControl.Next);
-            ActionsMap.Add(new Key(Modifiers.Ctrl | Modifiers.Win, Keys.F1), BrightnessDown);
-            ActionsMap.Add(new Key(Modifiers.Ctrl | Modifiers.Win, Keys.F2), BrightnessUp);
+            //ActionsMap.Add(new Key(Modifiers.Ctrl | Modifiers.Win, Keys.F1), Brightness.BrightnessDown);
+            //ActionsMap.Add(new Key(Modifiers.Ctrl | Modifiers.Win, Keys.F2), Brightness.BrightnessUp);
 
-        }
-
-        public void BrightnessUp()
-        {
-            //brightnessControl.BrightnessUp();
-        }
-
-        public void BrightnessDown()
-        {
-            //brightnessControl.BrightnessDown();
         }
     }
 
