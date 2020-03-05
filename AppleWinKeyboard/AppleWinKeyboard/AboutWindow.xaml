@@ -13,7 +13,7 @@
             </Style>
         </StackPanel.Resources>
         <TextBlock Text="AppleWinKeyboard" FontSize="25"/>
-        <TextBlock Text="Version alpha (build 0.0.0.1)"/>
+        <TextBlock Text="Version alpha (build 1.0.0)"/>
         <TextBlock Text="Author: Vladimír Antoš"/>
     </StackPanel>
 </Window>
